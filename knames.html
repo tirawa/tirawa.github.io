@@ -1,0 +1,54 @@
+<html>
+    <link href='https://fonts.googleapis.com/css?family=Emilys Candy' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Codystar' rel='stylesheet'>
+
+
+ <body style="
+ background-color: lavender;
+ font-family: 'Emilys Candy';
+ font-size: 60px;
+ padding-top: 140px;
+ ">
+ <style>
+     .names {
+         text-align: center;    
+         color: white;
+         text-shadow: 2px 2px 8px #E0B0FF;
+     }
+     .button {
+         background-color: #E0B0FF;
+         padding:15px 32px;
+         text-align:center;
+         font-family: Codystar;
+         cursor:pointer;
+         color:#4E2A84;
+         width:8%;
+         margin-left: 46%;
+         margin-right:auto;
+         position:absolute;
+         margin-top:70px;
+     }
+ </style>
+<div id="names1" class="names"></div>
+<button class="button" onclick="newname()">new</button></div>
+</body>
+<script>
+    const names = [
+    "Mi", "Hwa", "A", "Ji", "Soo", "Seo", "Tae", "Na", "Da", "Hyo", "Bo", "Bong", "Hee", "Min", "Yoon", "Yu", "Ye", "So", "Ryun", "Sol", "Moon", "Seol", "Si", "Eun", "Chae", "Hye", "Go", "Dam", 
+]
+const names2 = [
+    "yeon", "young", "hyeon", "na", "seon", "joon", "soo", "won", "a", "soon", "hee", "mi", "ra", "cha", "sa", "ji", "eun", "ri", "ram", "byul", "reum", "da",
+]
+
+const random = Math.floor(Math.random() * names.length)
+const random2 = Math.floor(Math.random() * names2.length)
+console.log(random, names[random]);
+
+document.getElementById("names1").innerHTML = names[random] + names2[random2]
+function newname() {
+    const random = Math.floor(Math.random() * names.length)
+    const random2 = Math.floor(Math.random() * names2.length)
+    document.getElementById("names1").innerHTML = names[random] + names2[random2];
+}
+</script>
+</html>
